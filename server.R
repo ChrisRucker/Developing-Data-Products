@@ -12,7 +12,7 @@ shinyServer(function(input, output) {
         
     output$distPlot <- renderPlot({
         nba <- readRDS("nba.rds")
-        PTS  <- nba[, 5]  # Old Faithful Geyser data
+        PTS  <- nba[, 5]  
         bins <- seq(min(PTS), max(PTS), length.out = input$bins + 1)
     
     output$text1 <- renderText({paste(
